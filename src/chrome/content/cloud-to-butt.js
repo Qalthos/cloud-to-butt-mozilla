@@ -31,12 +31,15 @@
     {
         var v = textNode.nodeValue;
     
-        v = v.replace(/\bThe Cloud/g, "My Butt");
-        v = v.replace(/\bThe cloud/g, "My butt");
-        v = v.replace(/\bthe Cloud/g, "my Butt");
-        v = v.replace(/\bthe cloud/g, "my butt");
-        v = v.replace(/Cloud/g, "Butt");
-        v = v.replace(/cloud/g, "butt");
+        v = v.replace(/\b(T)he(\s+)(C)loud/gi, function(str, p1, p2, p3) {
+            m = (p1 == "T") ? "M" : "m";
+            b = (p3 == "C") ? "B" : "b";
+            return m+"y" + p2 + b+"utt";
+        });
+        v = v.replace(/(C)loud/gi, function(str, p1) {
+            b = (p1 == "C") ? "B" : "b";
+            return b+"utt";
+        });
     
         textNode.nodeValue = v;
     }
