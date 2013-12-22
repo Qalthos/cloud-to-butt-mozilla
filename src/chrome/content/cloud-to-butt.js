@@ -40,6 +40,21 @@
             b = (p1 == "C") ? "B" : "b";
             return b+"utt";
         });
+        // http://xkcd.com/1288/
+        v = v.replace(/(s)pace/gi, '$1paaaaace');
+        v = v.replace(/Google Glass/gi, 'Virtual Boy');
+        v = v.replace(/(s)martphone/gi, function(str, p1) {
+            p = (p1 == 'S') ? 'P' : 'p';
+            return p+'okédex';
+        });
+        v = v.replace(/(e)lectric/gi, function(str, p1) {
+            a = (p1 == 'E') ? 'A' : 'a';
+            return a+'tomic';
+        });
+        v = v.replace(/senator/gi, 'Elf-Lord');
+        v = v.replace(/(c)ar/gi, '$1at');
+        v = v.replace(/election/gi, 'eating contest');
+        v = v.replace(/homeland(\s+)security/gi, 'Homestar$1Runner');
     
         textNode.nodeValue = v;
     }
