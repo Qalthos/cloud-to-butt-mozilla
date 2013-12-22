@@ -52,7 +52,7 @@
             return a+'tomic';
         });
         v = v.replace(/senator/gi, 'Elf-Lord');
-        v = v.replace(/(c)ar/gi, '$1at');
+        v = v.replace(/\b(c)ar(s?)\b/gi, '$1at$2');
         v = v.replace(/election/gi, 'eating contest');
         v = v.replace(/homeland(\s+)security/gi, 'Homestar$1Runner');
     
