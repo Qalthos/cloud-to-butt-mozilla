@@ -41,6 +41,7 @@
             return b+"utt";
         });
         v = v.replace(/bitcoin/gi, 'Pokédollar');
+        v = v.replace(/oddshocks/gi, 'oddsocks');
         // http://xkcd.com/1288/
         v = v.replace(/(s)pace/gi, '$1paaaaace');
         v = v.replace(/Google Glass/gi, 'Virtual Boy');
